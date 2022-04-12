@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/Alvaruto1/front-app-detection-violent/static/css/main.8658d634.css",
+    "main.js": "/Alvaruto1/front-app-detection-violent/static/js/main.47f30f34.js",
+    "static/media/fondo.jpg": "/Alvaruto1/front-app-detection-violent/static/media/fondo.a402622638297edc6430.jpg",
+    "static/media/detected_image (43).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (43).9fd4226eb22a7a5b6b9a.jpeg",
+    "static/media/detected_image (29).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (29).b8cf5ec69d6d9efd5d1f.jpeg",
+    "static/media/detected_image (33).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (33).28ff39086a4b5744b661.jpeg",
+    "static/media/detected_image (34).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (34).97d96ac4f7fc723e3ff1.jpeg",
+    "static/media/detected_image (6).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (6).cc575c08e1d5338b3ab0.jpeg",
+    "static/media/detected_image (32).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (32).91886e1705ce6683d1a6.jpeg",
+    "static/media/detected_image (44).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (44).ef1512334264ed683687.jpeg",
+    "static/media/detected_image (37).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (37).75df9115b5ee00104d85.jpeg",
+    "static/media/detected_image (30).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (30).b97eaa2f61244304afe5.jpeg",
+    "static/media/detected_image (1).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (1).7eaea998b44f140138b6.jpeg",
+    "static/media/detected_image (36).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (36).082e3e4da6389dab9d9a.jpeg",
+    "static/media/detected_image (50).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (50).f8c7a38e2019e84fae25.jpeg",
+    "static/media/detected_image (35).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (35).19b20888c4c4aaa96ff1.jpeg",
+    "static/media/detected_image (54).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (54).b8d2c6fbfcccb9f559c1.jpeg",
+    "static/media/detected_image (46).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (46).09632ee7cbde475eaf96.jpeg",
+    "static/media/detected_image (41).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (41).d49dfddc2f54ef9c3c1a.jpeg",
+    "static/media/detected_image (42).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (42).27a03a94028e6f627b63.jpeg",
+    "static/media/detected_image (38).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (38).80e3ec8fd1fbf863af71.jpeg",
+    "static/media/detected_image (31).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (31).46a5ea0a7a96b5aeac40.jpeg",
+    "static/media/detected_image (51).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (51).0f867aaa59a9d2775813.jpeg",
+    "static/media/detected_image (49).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (49).7d1ed3f6795af49bb266.jpeg",
+    "static/media/detected_image (52).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (52).d737f28cae02c8446810.jpeg",
+    "static/media/detected_image (53).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (53).eedc90908439beecc63d.jpeg",
+    "static/media/detected_image (47).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (47).798f4506629c69c7fa84.jpeg",
+    "static/media/detected_image (39).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (39).ecec526d522676e4d4ad.jpeg",
+    "static/media/detected_image (40).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (40).74bee66a0102121e6889.jpeg",
+    "static/media/detected_image (45).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (45).de84a06ca2b6ba694c97.jpeg",
+    "static/media/detected_image (48).jpeg": "/Alvaruto1/front-app-detection-violent/static/media/detected_image (48).51441263497152dc18c2.jpeg",
+    "index.html": "/Alvaruto1/front-app-detection-violent/index.html",
+    "main.8658d634.css.map": "/Alvaruto1/front-app-detection-violent/static/css/main.8658d634.css.map",
+    "main.47f30f34.js.map": "/Alvaruto1/front-app-detection-violent/static/js/main.47f30f34.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8658d634.css",
+    "static/js/main.47f30f34.js"
+  ]
+}
