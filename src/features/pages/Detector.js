@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { sendImageToDetect } from "../../actions/detector_actions";
 import ReactJson from "react-json-view";
+import Swal from "sweetalert2";
 
 import {} from "react-router-dom";
 
@@ -15,7 +16,21 @@ export default function Detector() {
   useEffect(() => {
     if (data_detection.detector) {
       const data = data_detection.detector.data;
-      setDetectedImageUrl(`data:image/jpeg;base64,${data.imageB64}`);
+      if (data.status){
+        setDetectedImageUrl(`data:image/jpeg;base64,${data.imageB64}`);
+        Swal.fire({
+          text: 'detection complete',
+          icon: 'success'
+        })
+      }      
+      else{
+        Swal.fire({
+          title: "Error!",
+          text: `${data.text}, support .jpeg y .jpg`,
+          icon: 'error'
+        })
+        setDetectedImageUrl("");
+      }
     }
   }, [data_detection.detector]);
 
