@@ -5,6 +5,9 @@ import App from './App';
 import { store } from './app/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
+import { isLiveAPiDetectorViolence } from './actions/detector_actions';
+
+store.dispatch(isLiveAPiDetectorViolence())
 
 ReactDOM.render(
   <React.StrictMode>

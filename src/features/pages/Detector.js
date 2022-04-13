@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { sendImageToDetect } from "../../actions/detector_actions";
+import {
+  sendImageToDetect,
+  isLiveAPiDetectorViolence,
+} from "../../actions/detector_actions";
 import ReactJson from "react-json-view";
 import Swal from "sweetalert2";
 
@@ -10,46 +13,68 @@ export default function Detector() {
   const [detectedImageUrl, setDetectedImageUrl] = useState("");
   const [inputImage, setInputImage] = useState("");
   const [nameImage, setNameImage] = useState("");
+  const [isLive, setIsLive] = useState(true);
   const dispatch = useDispatch();
   const data_detection = useSelector((state) => state);
+  const isLiveApi = useSelector((state) => state);
+
+  useEffect(() => {
+    if (isLiveApi.detector) {
+      if (!isLiveApi.detector.data.isLive) {
+        setIsLive(false);
+        Swal.fire({
+          text: "El servidor de detección de violencia esta apagado",
+          icon: "warning",
+        });
+      }
+    }
+  }, []);
 
   useEffect(() => {
     if (data_detection.detector) {
       const data = data_detection.detector.data;
-      if (data.status){
+      if (data.status) {
         setDetectedImageUrl(`data:image/jpeg;base64,${data.imageB64}`);
         Swal.fire({
-          text: 'detection complete',
-          icon: 'success'
-        })
-      }      
-      else{
+          text: "detection complete",
+          icon: "success",
+        });
+      } else if (data.status != null) {
         Swal.fire({
           title: "Error!",
           text: `${data.text}, support .jpeg y .jpg`,
-          icon: 'error'
-        })
+          icon: "error",
+        });
         setDetectedImageUrl("");
       }
     }
   }, [data_detection.detector]);
 
   const handleInputFile = (e) => {
-    setDetectedImageUrl("charging");
-    const fileInput = document.getElementById("formFile");
-    const data = new FormData();
-    setNameImage(fileInput.files[0].name);
-    data.append("file", fileInput.files[0]);
-    let reader = new FileReader();
-    reader.onload = function (e) {
-      setInputImage(e.target.result);
-    };
-    reader.readAsDataURL(fileInput.files[0]);
-    dispatch(sendImageToDetect(data));
+    dispatch(isLiveAPiDetectorViolence()).then((status) => {
+      setDetectedImageUrl("charging");
+      const fileInput = document.getElementById("formFile");
+      const data = new FormData();
+      setNameImage(fileInput.files[0].name);
+      data.append("file", fileInput.files[0]);
+      let reader = new FileReader();
+      reader.onload = function (e) {
+        setInputImage(e.target.result);
+      };
+      reader.readAsDataURL(fileInput.files[0]);
+      dispatch(sendImageToDetect(data));
+    }).catch((error)=>{
+      setIsLive(false);
+        Swal.fire({
+          text: "El servidor de detección de violencia esta apagado",
+          icon: "warning",
+        });
+    });
   };
   return (
     <div className="pt-16">
       <h1>Detector de violencia</h1>
+      <h1 className={!isLive ? "" : "hidden"}>Servidor apagado</h1>
 
       <div className="grid md:grid-cols-2 place-items-center grid-cols-1">
         <div className="grid grid-cols-1 place-items-center h-screen">
@@ -82,6 +107,7 @@ export default function Detector() {
                   accept=".jpeg"
                   id="formFile"
                   onChange={handleInputFile}
+                  disabled={!isLive}
                 />
               </div>
               {inputImage === "" ? (
@@ -124,7 +150,7 @@ export default function Detector() {
                 {detectedImageUrl === "charging" ? (
                   <svg
                     role="status"
-                    class="mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                    className="mr-2 w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
                     viewBox="0 0 100 101"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -166,4 +192,3 @@ export default function Detector() {
     </div>
   );
 }
-
