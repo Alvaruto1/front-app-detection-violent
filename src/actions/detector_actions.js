@@ -2,7 +2,7 @@ export const SEND_IMAGE_DETECT = "SEND_IMAGE_DETECT";
 export const IS_LIVE_API_DETECTOR_VIOLENCE = "IS_LIVE_API_DETECTOR_VIOLENCE";
 
 export function sendImageToDetect(file) {
-  const url = "https://detector-violence.myftp.org:8084?download=True";
+  const url = "https://detector-violence.myftp.org/?download=True";
   const request = fetch(url, {
     method: "POST",
     body: file,
@@ -30,7 +30,7 @@ export function sendImageToDetect(file) {
 }
 
 export function isLiveAPiDetectorViolence() {
-  const url = "https://detector-violence.myftp.org:8084";
+  const url = "https://detector-violence.myftp.org";
   const request = fetch(url, {
     method: "GET",
   });

@@ -5,6 +5,7 @@ import "./pages.css";
 export default function DetectionsExample() {
   return (
     <div className="pt-32 flip -z-10 w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+      <h1 className="m-10">Hacer click sobre las imagenes y mantener para ver resultado de detección</h1>
       {detected_images_example.map((element, index) => (
         <div className="flip-content m-auto mb-10 shadow-md" key={index + "1"}>
           <div className="flex flip-front h-full" key={index + "2"}>

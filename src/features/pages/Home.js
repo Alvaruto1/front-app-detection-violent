@@ -11,7 +11,7 @@ export default function Home() {
         >
           <div className="m-auto">
             <p className="text-2xl">Mi nombre es:</p>
-            <p className="text-2xl mb-10">Alvaro Niño</p>
+            <p className="text-2xl mb-10">Andres Niño</p>
             <p className="text-2xl">Estudiante de Ingenieria de Sistemas</p>
             <p className="text-2xl mt-10">De la Universidad Distrital FJC</p>
           </div>
