@@ -1,8 +1,9 @@
 export const SEND_IMAGE_DETECT = "SEND_IMAGE_DETECT";
 export const IS_LIVE_API_DETECTOR_VIOLENCE = "IS_LIVE_API_DETECTOR_VIOLENCE";
 
+const back_url = process.env.REACT_APP_BACK_URL;
 export function sendImageToDetect(file) {
-  const url = "https://detector-violence.myftp.org/?download=True";
+  const url = back_url + "/?download=True";
   const request = fetch(url, {
     method: "POST",
     body: file,
@@ -30,7 +31,7 @@ export function sendImageToDetect(file) {
 }
 
 export function isLiveAPiDetectorViolence() {
-  const url = "https://detector-violence.myftp.org";
+  const url = back_url;
   const request = fetch(url, {
     method: "GET",
   });
@@ -51,7 +52,7 @@ export function isLiveAPiDetectorViolence() {
         .catch((error) => {
           dispatch({
             type: SEND_IMAGE_DETECT,
-            payload: {isLive: false, text: "no live"},
+            payload: { isLive: false, text: "no live" },
           });
           reject(error);
         });
